@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolarConnect - Dashboard</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1183d4',
+              'background-light': '#f6f7f8',
+              'background-dark': '#101a22',
+            },
+            fontFamily: {
+              display: ['Manrope'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen">
+<aside class="flex w-64 flex-col bg-background-light dark:bg-background-dark border-r border-gray-200 dark:border-gray-800 p-4">
+<div class="flex flex-col items-center gap-2 pb-6 border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">solar_power</span>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">SolarConnect</h1>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Empowering Sustainable Energy</p>
+</div>
+<nav class="mt-6 flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg bg-primary/10 dark:bg-primary/20 px-3 py-2 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#energy-listings-section">
+<span class="material-symbols-outlined">list</span>
+<span class="text-sm font-medium">Energy Listings</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="user_profile.html">
+<span class="material-symbols-outlined">tune</span>
+<span class="text-sm font-medium">Preferences</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#consumption-savings-section">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-sm font-medium">Consumption</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="user_profile.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="flex flex-col gap-4 rounded-xl bg-gray-100 dark:bg-gray-800/50 p-4">
+<p class="text-sm font-medium text-gray-900 dark:text-white">Need help?</p>
+<p class="text-xs text-gray-600 dark:text-gray-400">Our support team is here to assist you with any questions.</p>
+<button class="w-full rounded-lg bg-primary py-2 text-sm font-semibold text-white">Contact Support</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<div class="max-w-7xl mx-auto">
+<header class="mb-8">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white">Dashboard</h2>
+<p class="text-gray-500 dark:text-gray-400">Welcome back, Alex! Here's your energy overview.</p>
+</header>
+<section class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Total Energy Purchased</p>
+<p class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">1250 kWh</p>
+<p class="mt-1 text-sm font-medium text-green-500">+10%</p>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Cost Savings</p>
+<p class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">₹22,976</p>
+<p class="mt-1 text-sm font-medium text-green-500">+15%</p>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">CO₂ Emissions Reduced</p>
+<p class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">500 kg</p>
+<p class="mt-1 text-sm font-medium text-green-500">+20%</p>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-4" id="energy-listings-section">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Energy Listings</h3>
+<div class="relative w-full max-w-xs">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-gray-400">search</span>
+</div>
+<input id="search-input" class="block w-full rounded-lg border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 pl-10 pr-3 py-2 text-sm placeholder-gray-400 focus:border-primary focus:ring-primary" placeholder="Search producers..." type="text"/>
+</div>
+</div>
+<div id="listings-container" class="space-y-4">
+<div class="listing-item flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABssTfxUEEfZxknizWvD3WyRYt__5WODMunje4qOEiHrQjetETQMS39AS7emNelixAjncSCfwgOFt8YgYL3_o8qQIHbbicrr6i9MFjmH9W83-1_asrjLK5ttUdPRTLf5FIKaZbkY0fonE3dkhaK5t6HeA_UCGwHebBDhYOjLvEMYZZc0JcskfJpFt7gb4qpZKV5YDFx1y9_DUHtALyFxEgPhGaKEdctXkfaXvp1WLNCslfsaxSZTMixxqgN-Pgu4pYYHInH-nmo8QH");'></div>
+<div class="flex-1">
+<p class="producer-name font-bold text-gray-900 dark:text-white">Green Valley Solar</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Available: 250 kWh | Price: ₹10.03/kWh</p>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-primary p-2 text-white hover:bg-primary/90">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="listing-item flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChG7zK3I7Ruhf_6U1eok4auFN0coG5OBseL7mj4jzwNv_hAVN98grDvbz7kW6oEk58f_LD_hiC4h6gfgLFVm3tTPIYm196mJNpwtH6nNyNStV4xSSWec_RUPGm4eLZiyPFr9uhPn_MBpnspPXu7r08Nmy-22xiWrUcLI0Dwzn1Y61pYJh0Vvh93rIaQNRssK5PgY9YUs8Se2IkuJHIxRjiw20mv3iQziLoA_5UGQS7OY-1RH4ehM0l8G843obvPacN40MBMnx9Fx1d");'></div>
+<div class="flex-1">
+<p class="producer-name font-bold text-gray-900 dark:text-white">EcoHome Energy</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Available: 180 kWh | Price: ₹0.11/kWh</p>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-primary p-2 text-white hover:bg-primary/90">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" id="consumption-savings-section">Consumption & Savings</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+<p class="text-base font-medium text-gray-900 dark:text-white">Energy Consumption Over Time</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Last 30 Days</p>
+<div class="mt-4 h-48">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" stroke="#1183d4" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chart-gradient)"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chart-gradient" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#1183d4" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#1183d4" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+<p class="text-base font-medium text-gray-900 dark:text-white">Cost Savings by Producer</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Last Month</p>
+<div class="mt-4 h-48 flex items-end justify-around gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 rounded-t-lg bg-primary/20" style="height: 60%;">
+<div class="w-full h-full rounded-t-lg bg-primary" style="height: 80%;"></div>
+</div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400">GVS</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 rounded-t-lg bg-primary/20" style="height: 80%;">
+<div class="w-full h-full rounded-t-lg bg-primary" style="height: 65%;"></div>
+</div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400">EcoHome</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 rounded-t-lg bg-primary/20" style="height: 50%;">
+<div class="w-full h-full rounded-t-lg bg-primary" style="height: 90%;"></div>
+</div>
+<p class="text-xs font-medium text-gray-500 dark:text-gray-400">Sun Co.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Your Preferences</h3>
+<button id="edit-button" onclick="toggleEditMode()" class="text-sm font-medium text-primary hover:underline">Edit</button>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-gray-200 dark:border-gray-800 py-3">
+<p class="text-sm text-gray-500 dark:text-gray-400">Price Limit</p>
+<div class="text-right">
+<p id="price-limit-display" class="text-sm font-medium text-gray-900 dark:text-white">₹12.53/kWh</p>
+<input id="price-limit-edit" type="text" class="hidden form-input w-40 text-sm font-medium text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800/50 rounded-md border-gray-300 dark:border-gray-700 text-right focus:ring-primary focus:border-primary" value="₹12.53/kWh">
+</div>
+</div>
+<div class="flex justify-between items-center border-b border-gray-200 dark:border-gray-800 py-3">
+<p class="text-sm text-gray-500 dark:text-gray-400">Preferred Producers</p>
+<div class="text-right">
+<p id="producers-display" class="text-sm font-medium text-gray-900 dark:text-white">Green Valley, EcoHome</p>
+<input id="producers-edit" type="text" class="hidden form-input w-40 text-sm font-medium text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800/50 rounded-md border-gray-300 dark:border-gray-700 text-right focus:ring-primary focus:border-primary" value="Green Valley, EcoHome">
+</div>
+</div>
+<div class="flex justify-between items-center py-3">
+<p class="text-sm text-gray-500 dark:text-gray-400">Minimum Energy</p>
+<div class="text-right">
+<p id="min-energy-display" class="text-sm font-medium text-gray-900 dark:text-white">100 kWh</p>
+<input id="min-energy-edit" type="text" class="hidden form-input w-40 text-sm font-medium text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800/50 rounded-md border-gray-300 dark:border-gray-700 text-right focus:ring-primary focus:border-primary" value="100 kWh">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<script>
+    // --- In-Page Edit Functionality ---
+    let isEditing = false;
+
+    function toggleEditMode() {
+        isEditing = !isEditing;
+
+        const editButton = document.getElementById('edit-button');
+        const priceDisplay = document.getElementById('price-limit-display');
+        const producersDisplay = document.getElementById('producers-display');
+        const minEnergyDisplay = document.getElementById('min-energy-display');
+        const priceEdit = document.getElementById('price-limit-edit');
+        const producersEdit = document.getElementById('producers-edit');
+        const minEnergyEdit = document.getElementById('min-energy-edit');
+
+        if (isEditing) {
+            editButton.textContent = 'Save';
+            priceDisplay.classList.add('hidden');
+            producersDisplay.classList.add('hidden');
+            minEnergyDisplay.classList.add('hidden');
+            priceEdit.classList.remove('hidden');
+            producersEdit.classList.remove('hidden');
+            minEnergyEdit.classList.remove('hidden');
+            priceEdit.value = priceDisplay.textContent;
+            producersEdit.value = producersDisplay.textContent;
+            minEnergyEdit.value = minEnergyDisplay.textContent;
+        } else {
+            editButton.textContent = 'Edit';
+            priceDisplay.textContent = priceEdit.value;
+            producersDisplay.textContent = producersEdit.value;
+            minEnergyDisplay.textContent = minEnergyEdit.value;
+            priceDisplay.classList.remove('hidden');
+            producersDisplay.classList.remove('hidden');
+            minEnergyDisplay.classList.remove('hidden');
+            priceEdit.classList.add('hidden');
+            producersEdit.classList.add('hidden');
+            minEnergyEdit.classList.add('hidden');
+        }
+    }
+
+    // --- Search Bar Functionality ---
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            const listingsContainer = document.getElementById('listings-container');
+            const listings = listingsContainer.getElementsByClassName('listing-item');
+
+            searchInput.addEventListener('keyup', function() {
+                const filter = searchInput.value.toLowerCase();
+                for (let i = 0; i < listings.length; i++) {
+                    const listing = listings[i];
+                    const producerNameElement = listing.querySelector('.producer-name');
+                    if (producerNameElement) {
+                        const producerName = producerNameElement.textContent || producerNameElement.innerText;
+                        if (producerName.toLowerCase().indexOf(filter) > -1) {
+                            listing.style.display = "";
+                        } else {
+                            listing.style.display = "none";
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

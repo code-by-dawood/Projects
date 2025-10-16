@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolarConnect - P2P Energy Trading</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link rel="icon" type="image/png" href="logo.png">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1183d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: theme('fontFamily.display');
+        }
+      }
+    </style>
+<style>
+      /* CSS for the blinking cursor */
+      .typing-effect::after {
+        content: '|';
+        display: inline-block;
+        animation: blink-caret 0.75s step-end infinite;
+      }
+      @keyframes blink-caret {
+        from, to {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between border-b border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">SolarConnect</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#why-choose-us">How it works</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="pricing.html">Pricing</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="resources.html">Resources</a>
+</nav>
+<div class="flex items-center gap-2">
+<a class="rounded-lg px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-primary/20" href="login_page.html">Login</a>
+<a class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105" href="signup.html">Get Started</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative py-24 sm:py-32">
+<div class="absolute inset-0">
+<img alt="Solar panels on a residential roof" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6MtxzjbEDnU7zfLbexYyWhqe3iIJEUxflWYPrRFu-BT7C82RQpvmw1ERkgZCdZJwPz_LUZ1TW1OCF9jN6zIrM6PU1qXqHRt4rLSLkZcblVedZi1-OVL-GEv7u8Nm4BNJdX4qphGNaxUN3a7uKylBFmdB9zzPT6EsEYLCMfWfcYO0QORa0jvbsmfZqKrh5YSmJretTfdmTfArbRsFQOwCY4-C7Nmn5fvrSY7GPy2whTrhM3aYfqNtlWHA_arVHt52tNRCqf7SWeKTg"/>
+<div class="absolute inset-0 bg-background-dark/60"></div>
+</div>
+<div class="relative mx-auto max-w-4xl px-4 text-center text-white sm:px-6 lg:px-8">
+<h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl typing-effect"></h1>
+<p class="mx-auto mt-6 max-w-2xl text-lg text-gray-200">
+              Join SolarConnect, the innovative platform connecting residential solar power producers with consumers. Trade surplus energy directly, fostering sustainability, reducing costs, and enhancing energy independence.
+            </p>
+<div class="mt-10 flex flex-wrap justify-center gap-4">
+<a class="rounded-lg bg-primary px-6 py-3 text-base font-bold text-white shadow-lg transition-transform hover:scale-105" href="producer.html">For Producers</a>
+<a class="rounded-lg bg-white/10 px-6 py-3 text-base font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/20" href="consumer.html">For Consumers</a>
+</div>
+</div>
+</section>
+<section id="why-choose-us" class="py-16 sm:py-24">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">Why Choose SolarConnect?</h2>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">Our platform offers a unique approach to energy trading, benefiting both producers and consumers.</p>
+</div>
+<div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col gap-4 rounded-xl bg-background-light p-6 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-primary/10 dark:ring-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z"></path>
+</svg>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Sustainable Energy</h3>
+<p class="text-base text-gray-600 dark:text-gray-400">Promote a greener future by trading renewable energy within your community.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-background-light p-6 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-primary/10 dark:ring-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M152,120H136V56h8a32,32,0,0,1,32,32,8,8,0,0,0,16,0,48.05,48.05,0,0,0-48-48h-8V24a8,8,0,0,0-16,0V40h-8a48,48,0,0,0,0,96h8v64H104a32,32,0,0,1-32-32,8,8,0,0,0-16,0,48.05,48.05,0,0,0,48,48h16v16a8,8,0,0,0,16,0V216h16a48,48,0,0,0,0-96Zm-40,0a32,32,0,0,1,0-64h8v64Zm40,80H136V136h16a32,32,0,0,1,0,64Z"></path>
+</svg>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Cost Savings</h3>
+<p class="text-base text-gray-600 dark:text-gray-400">Reduce your energy bills by buying or selling energy at competitive rates.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-background-light p-6 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-primary/10 dark:ring-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path>
+</svg>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Enhanced Independence</h3>
+<p class="text-base text-gray-600 dark:text-gray-400">Gain control over your energy supply and reduce reliance on traditional grids.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary/5 dark:bg-primary/10">
+<div class="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-24">
+<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">Ready to Transform Your Energy Experience?</h2>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">Sign up now and be part of the decentralized energy revolution.</p>
+<div class="mt-8 flex justify-center">
+<a class="rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-lg transition-transform hover:scale-105" href="signup.html">Join SolarConnect Today</a>
+</div>
+</div>
+</section>
+</main>
+<footer id="footer" class="bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-center">
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">About Us</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Contact</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Terms of Service</a>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2025 SolarConnect. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const textElement = document.querySelector('.typing-effect');
+        const textToType = 'Distributed Energy Trading for Solar Homes';
+        textElement.textContent = ''; // Clear the initial text
+
+        let charIndex = 0;
+        const typingSpeed = 70; // Adjust typing speed here
+
+        function type() {
+          if (charIndex < textToType.length) {
+            textElement.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingSpeed);
+          }
+        }
+        type();
+      });
+    </script>
+</body>
+</html>

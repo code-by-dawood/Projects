@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>SolarConnect - Signup</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link rel="icon" type="image/png" href="logo.png">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="w-full">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4 border-b border-gray-200/20 dark:border-gray-700/20">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">SolarConnect</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary" href="landing.html#footer">About</a>
+<a class="text-sm font-medium hover:text-primary" href="landing.html#why-choose-us">How it Works</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Pricing</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="text-sm font-bold bg-primary/20 hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40 text-primary px-4 py-2 rounded-lg transition-colors" href="login_page.html">Log In</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div class="text-center">
+<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Create Your Account</h2>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Join the decentralized energy revolution.</p>
+</div>
+<form id="signup-form" action="landing.html" class="mt-8 space-y-6" method="GET">
+<div class="rounded-lg shadow-sm -space-y-px">
+<div>
+<label class="sr-only" for="full-name">Full Name</label>
+<input class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-black/20 rounded-t-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="full-name" name="name" placeholder="Full Name" required="" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-black/20 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="email-address" name="email" placeholder="Email address" required="" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<input autocomplete="new-password" class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-black/20 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+<div>
+<label class="sr-only" for="confirm-password">Confirm Password</label>
+<input autocomplete="new-password" class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-black/20 focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required="" type="password"/>
+<div id="password-feedback" class="text-sm mt-2 text-red-500 hidden">Passwords do not match or do not meet the criteria.</div>
+</div>
+<div>
+<label class="sr-only" for="user-type">User Type</label>
+<select class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-black/20 rounded-b-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="user-type" name="user-type" required="" onchange="highlightSelectedOption(this)">
+<option disabled="" selected="">Select user type</option>
+<option value="producer">PRODUCER</option>
+<option value="consumer">CONSUMER</option>
+<option value="prosumer">PROSUMER</option>
+</select>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary rounded" id="terms" name="terms" required="" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="terms">I agree to the <a class="font-medium text-primary hover:text-primary/80" onclick="showTermsModal()">Terms & Conditions</a></label>
+</div>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary" type="submit">
+                            Sign Up
+                        </button>
+</div>
+</form>
+<p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+                    Already have an account?
+                    <a class="font-medium text-primary hover:text-primary/80" href="login_page.html">
+                        Log In
+                    </a>
+</p>
+</div>
+</main>
+</div>
+<div id="terms-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-background-dark/80 backdrop-blur-sm">
+<div class="flex min-h-full items-center justify-center p-4 text-center">
+<div class="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white dark:bg-background-dark p-6 text-left align-middle shadow-xl transition-all">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-medium leading-6 text-gray-900 dark:text-white">Terms & Conditions</h3>
+<button class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400" onclick="hideTermsModal()">
+<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+<div class="mt-2 text-sm text-gray-600 dark:text-gray-400 max-h-96 overflow-y-auto pr-4">
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">1. Acceptance of Terms</h4>
+<p class="mb-4">By accessing and using the SolarConnect platform, you agree to be bound by these Terms and Conditions. If you do not agree, you may not use the platform. We reserve the right to modify these terms at any time.</p>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">2. User Accounts</h4>
+<p class="mb-4">You must create an account to use the platform. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use.</p>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">3. Energy Trading</h4>
+<p class="mb-4">SolarConnect acts as a marketplace for peer-to-peer energy trading. We do not own or sell energy ourselves. All transactions are conducted between users. We are not liable for any disputes arising from energy trades.</p>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">4. Prohibited Conduct</h4>
+<p class="mb-4">You agree not to use the platform for any unlawful or prohibited activities, including but not limited to:
+<ul class="list-disc list-inside ml-4 space-y-1">
+<li>Unauthorized access to our systems.</li>
+<li>Spamming or harassment of other users.</li>
+<li>Fraudulent or misleading activities.</li>
+</ul></p>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">5. Disclaimers</h4>
+<p class="mb-4">The platform is provided "as is" without any warranties. We do not guarantee uninterrupted or error-free access. We are not liable for any damages resulting from your use of the platform.</p>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">6. Governing Law</h4>
+<p class="mb-4">These terms shall be governed by the laws of the jurisdiction where SolarConnect is incorporated, without regard to its conflict of law provisions.</p>
+</div>
+<div class="mt-4 flex justify-end">
+<button class="rounded-lg bg-primary py-2 px-4 text-sm font-semibold text-white hover:bg-primary/90" onclick="hideTermsModal()">I Understand</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+        function showTermsModal() {
+            document.getElementById('terms-modal').classList.remove('hidden');
+        }
+        function hideTermsModal() {
+            document.getElementById('terms-modal').classList.add('hidden');
+        }
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirm-password');
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            const passwordFeedback = document.getElementById('password-feedback');
+
+            const hasLetter = /[a-zA-Z]/.test(password);
+            const hasNumber = /[0-9]/.test(password);
+            const hasSpecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+            const isLongEnough = password.length >= 6;
+            const passwordsMatch = password === confirmPassword;
+
+            if (!hasLetter || !hasNumber || !hasSpecial || !isLongEnough || !passwordsMatch) {
+                event.preventDefault();
+                passwordFeedback.textContent = 'Passwords do not match or do not meet the criteria.';
+                if (!passwordsMatch) {
+                    passwordFeedback.textContent = 'Passwords do not match.';
+                } else if (!isLongEnough) {
+                    passwordFeedback.textContent = 'Password must be at least 6 characters long.';
+                } else if (!hasLetter || !hasNumber || !hasSpecial) {
+                    passwordFeedback.textContent = 'Password must contain at least one letter, one number, and one special character.';
+                }
+                passwordFeedback.classList.remove('hidden');
+            } else {
+                passwordFeedback.classList.add('hidden');
+            }
+        });
+
+        function highlightSelectedOption(selectElement) {
+            const options = selectElement.options;
+            for (let i = 0; i < options.length; i++) {
+                options[i].classList.remove('highlight-option');
+            }
+            const selectedOption = options[selectElement.selectedIndex];
+            selectedOption.classList.add('highlight-option');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SolarConnect - Community</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#192833",
+                        "muted-light": "#6b7280",
+                        "muted-dark": "#92b2c9",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#325167"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+    <div class="flex min-h-screen">
+        <aside class="w-64 bg-surface-light dark:bg-surface-dark/50 p-6 flex-col hidden lg:flex">
+            <div class="flex items-center gap-2 mb-10">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <svg fill="white" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M234.3,101.44a8,8,0,0,0-8.23-1.63L184,114.2V92a12,12,0,0,0-12-12H92a12,12,0,0,0-12,12v88.35L42,166.7a8,8,0,0,0-12.28,9.75l24,64a8,8,0,0,0,14.6,5.48l16-42.67,46.12,17.3a12,12,0,0,0,9.15.11L184,204V164a12,12,0,0,0-5.6-10.4L136,128l42.4-25.6A12,12,0,0,0,184,92v-6.2l38.07-14.28a8,8,0,0,0,6.23-14.56Zm-34.82,10.63a4,4,0,0,1,1.87,3.46v54.94l-38.07-14.28a12,12,0,0,0-9.15-.11L92,156.45V92h80v26.07a12,12,0,0,0,5.6,10.4L204,144l-4.52-12.06a4,4,0,0,1,1.87-4.83ZM75.28,230.18l-18-48L80,172.53v-5.22l33.15,12.43Zm41.13-90.87Z"></path></svg>
+                </div>
+                <h1 class="text-xl font-bold text-gray-900 dark:text-white">SolarTrade</h1>
+            </div>
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 px-4 py-2 text-sm font-medium rounded-DEFAULT text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-surface-dark" href="consumer.html">
+                    <span class="material-symbols-outlined text-muted-light dark:text-muted-dark">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center gap-3 px-4 py-2 text-sm font-medium rounded-DEFAULT text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-surface-dark" href="#">
+                    <span class="material-symbols-outlined text-muted-light dark:text-muted-dark">monitoring</span>
+                    Trading
+                </a>
+                <a class="flex items-center gap-3 px-4 py-2 text-sm font-medium rounded-DEFAULT text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-surface-dark" href="trade.html">
+                    <span class="material-symbols-outlined text-muted-light dark:text-muted-dark">history</span>
+                    Transactions
+                </a>
+                <a class="flex items-center gap-3 px-4 py-2 text-sm font-medium rounded-DEFAULT bg-primary/10 dark:bg-primary/20 text-primary" href="community.html">
+                    <span class="material-symbols-outlined">groups</span>
+                    Community
+                </a>
+                <a class="flex items-center gap-3 px-4 py-2 text-sm font-medium rounded-DEFAULT text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-surface-dark" href="user_profile.html">
+                    <span class="material-symbols-outlined text-muted-light dark:text-muted-dark">person</span>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+        <main class="flex-1 p-6 lg:p-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Community Forum</h1>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-sm p-6 space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Welcome, Solar Enthusiasts!</h3>
+                        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is a place to connect with other producers and consumers, share tips, ask questions, and discuss all things solar energy.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-lg bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark">
+                            <p class="font-semibold text-gray-900 dark:text-white">John Doe</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">"I just installed my first solar panels. Any tips on maximizing my energy production?"</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-background-light dark:bg-background-dark/50 border border-border-light dark:border-border-dark">
+                            <p class="font-semibold text-gray-900 dark:text-white">Jane Smith</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">"I'm a new consumer on the platform. What's the best time to buy energy?"</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-border-light dark:border-border-dark">
+                        <h4 class="text-base font-bold text-gray-900 dark:text-white">Join the Conversation</h4>
+                        <textarea class="mt-2 w-full rounded-DEFAULT border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark/50 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" rows="4" placeholder="Write your post here..."></textarea>
+                        <button onclick="postComment()" class="mt-2 bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary/90">Post</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        function postComment() {
+            // In a real application, you would send this data to a server.
+            alert('Your comment has been posted!');
+        }
+    </script>
+</body>
+</html>

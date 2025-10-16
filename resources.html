@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolarConnect - Resources</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link rel="icon" type="image/png" href="logo.png">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1183d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: theme('fontFamily.display');
+        }
+        .hidden-content {
+          display: none;
+        }
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between border-b border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">SolarConnect</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="landing.html#why-choose-us">How it works</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="pricing.html">Pricing</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="resources.html">Resources</a>
+</nav>
+<div class="flex items-center gap-2">
+<a class="rounded-lg px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-primary/20" href="login_page.html">Login</a>
+<a class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105" href="signup.html">Get Started</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow py-24 sm:py-32">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<h1 class="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">Helpful Resources</h1>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">Find guides, articles, and FAQs to help you get the most out of SolarConnect.</p>
+</div>
+<div id="content-container" class="mt-12 space-y-8">
+<div id="initial-view" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col rounded-xl bg-white p-6 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">Getting Started Guide</h2>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">A step-by-step guide for new users to set up their profile and make their first trade.</p>
+<a class="mt-4 text-sm font-semibold text-primary hover:underline cursor-pointer" onclick="showContent('getting-started-content')">Read More &rarr;</a>
+</div>
+<div class="flex flex-col rounded-xl bg-white p-6 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">How to Price Your Energy</h2>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Tips for producers on how to set competitive and profitable energy prices.</p>
+<a class="mt-4 text-sm font-semibold text-primary hover:underline cursor-pointer" onclick="showContent('pricing-energy-content')">Read More &rarr;</a>
+</div>
+<div class="flex flex-col rounded-xl bg-white p-6 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">FAQs</h2>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Find answers to the most common questions about SolarConnect.</p>
+<a class="mt-4 text-sm font-semibold text-primary hover:underline cursor-pointer" onclick="showContent('faqs-content')">Read More &rarr;</a>
+</div>
+</div>
+<div id="getting-started-content" class="hidden-content rounded-xl bg-white p-8 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Getting Started Guide</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-4">Welcome to SolarConnect! Follow this guide to get your account set up and start trading energy.</p>
+<div class="space-y-6 text-gray-600 dark:text-gray-400">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Step 1: Sign Up and Create Your Profile</h3>
+<p>Begin by creating your account on our <a href="signup.html" class="text-primary hover:underline">Sign Up page</a>. You'll need to provide some basic information and select your user type (Consumer, Producer, or Prosumer).</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Step 2: Connect Your Solar System</h3>
+<p>If you're a producer, you'll need to securely connect your solar energy system to our platform. Our system uses a smart meter to track your energy generation and export. For a hassle-free setup, we recommend a certified solar contractor to ensure your system is properly connected to the grid and our network.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Step 3: Set Your Preferences</h3>
+<p>Configure your preferences to automate trades. Consumers can set a price limit, minimum energy amount, and preferred producers. Producers can set their price per kWh and manage their energy listings. This allows the platform to automatically match you with the best available trades.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Step 4: Monitor and Trade</h3>
+<p>Use your personal dashboard to monitor your energy consumption, generation, and savings. The dashboard provides real-time data and a complete trade history, giving you full control and transparency over your energy usage.</p>
+</div>
+<button class="mt-8 rounded-lg bg-primary py-3 px-6 text-sm font-semibold text-white transition-transform hover:scale-105" onclick="showContent('initial-view')">Back to Resources</button>
+</div>
+<div id="pricing-energy-content" class="hidden-content rounded-xl bg-white p-8 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">How to Price Your Energy</h2>
+<p class="text-gray-600 dark:text-gray-400 mb-4">Setting a competitive and profitable price is key to a successful experience as a producer on SolarConnect. Consider the following factors:</p>
+<div class="space-y-6 text-gray-600 dark:text-gray-400">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Understanding Your Costs</h3>
+<p>Your energy price should be based on your **Levelized Cost of Electricity (LCOE)**. This is the total cost of your solar system over its lifetime, divided by its total energy output. Factors include:</p>
+<ul class="list-disc list-inside space-y-2">
+<li>**Equipment Costs:** Solar panels, inverters, and mounting structures.</li>
+<li>**Installation Costs:** Labor, permits, and grid-connection fees.</li>
+<li>**Operating & Maintenance (O&M):** Annual cleaning, monitoring, and repairs.</li>
+</ul>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Market and Grid Pricing</h3>
+<p>Research the average **price per watt (₹/W)** in your local market. Compare your LCOE to your utility's residential electricity rate to ensure your price is competitive. You can offer a small discount to attract more buyers while still earning a profit.</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Maximizing Your Profit</h3>
+<p>The **price per kWh** is the main factor consumers consider. A lower price can attract more buyers, while a higher price increases your profit margin per trade. Your goal is to find a balance. Using our platform's real-time data, you can adjust your price based on current demand and available supply to maximize your earnings.</p>
+</div>
+<button class="mt-8 rounded-lg bg-primary py-3 px-6 text-sm font-semibold text-white transition-transform hover:scale-105" onclick="showContent('initial-view')">Back to Resources</button>
+</div>
+<div id="faqs-content" class="hidden-content rounded-xl bg-white p-8 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+<div class="space-y-6 text-gray-600 dark:text-gray-400">
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">How do solar panels work?</h3>
+<p>Solar panels are made of photovoltaic (PV) cells that absorb sunlight and convert it into direct current (DC) electricity. An inverter then changes this DC power into alternating current (AC), which powers your home or business appliances. Excess energy can be stored in a battery or sold directly to other users on our platform.</p>
+</div>
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">What is a Virtual Power Plant (VPP)?</h3>
+<p>A Virtual Power Plant (VPP) is a network of distributed energy resources like residential solar panels and batteries that are aggregated and managed by a central control system. SolarConnect's platform acts as a VPP, allowing us to manage and trade energy between users, ensuring grid stability and efficiency.</p>
+</div>
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Do solar panels work on cloudy or rainy days?</h3>
+<p>Yes, solar panels still generate electricity on cloudy or rainy days, but their efficiency is reduced. They use diffused sunlight to produce power, though the output may be 30-50% lower compared to a sunny day. Your home can draw from the grid or a battery on days when solar production is low.</p>
+</div>
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">How do I maintain my solar panels?</h3>
+<p>Solar panels require minimal maintenance. Regularly cleaning the surface (every 2-3 months) to remove dust and debris will ensure maximum efficiency. We recommend a professional check-up once a year to inspect the wiring, inverter, and overall system health.</p>
+</div>
+</div>
+<button class="mt-8 rounded-lg bg-primary py-3 px-6 text-sm font-semibold text-white transition-transform hover:scale-105" onclick="showContent('initial-view')">Back to Resources</button>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-center">
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="landing.html#footer">About Us</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Contact</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Terms of Service</a>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2025 SolarConnect. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+<script>
+      function showContent(contentId) {
+        const initialView = document.getElementById('initial-view');
+        const gettingStartedContent = document.getElementById('getting-started-content');
+        const pricingEnergyContent = document.getElementById('pricing-energy-content');
+        const faqsContent = document.getElementById('faqs-content');
+
+        initialView.classList.add('hidden-content');
+        gettingStartedContent.classList.add('hidden-content');
+        pricingEnergyContent.classList.add('hidden-content');
+        faqsContent.classList.add('hidden-content');
+
+        document.getElementById(contentId).classList.remove('hidden-content');
+      }
+    </script>
+</body>
+</html>

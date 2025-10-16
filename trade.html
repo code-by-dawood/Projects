@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolarConnect - P2P Energy Trading</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link rel="icon" type="image/png" href="logo.png">
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1183d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-background-light dark:bg-background-dark border-r border-primary/20 dark:border-primary/30 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHiHt-BkMMrC-cXysU7sKZLkAz3wAzYyPqZF2t-jBmNdI1awaNeLqA4yfpk-PuEgatzT_Vq4d1ZJRKBDeOuBQUM4TDmP4KYk3q_7hJ84DYYbysH2LjfoaipL2Ic8GToDIxdEFonZCy-fCux3sFe0kdi5o9hzd-KdgoLlBFRGMcwkSPp348ssV8aKZFYjoJJ9Pf0XZhggg7m95NLvHkp9kcg2LPL9e1k0B89BBE4IK1THBZIi721G2Q20RXzhrwyi3cp8UnYMhsb02O");'></div>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">SolarConnect</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="consumer.html">
+<span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+          </a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="consumer.html">
+<span class="material-symbols-outlined">paid</span>
+            Trade
+          </a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg" href="trade.html">
+<span class="material-symbols-outlined">history</span>
+            History
+          </a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+            Wallet
+          </a>
+<a class="flex items-center gap-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20" href="user_profile.html">
+<span class="material-symbols-outlined">settings</span>
+            Settings
+          </a>
+</nav>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Trade History & Ledger</h1>
+<p class="text-gray-600 dark:text-gray-400 mt-1">An immutable record of all energy transactions on the platform.</p>
+</header>
+<div class="mb-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500" placeholder="Search transactions by ID, participant, or date..." type="text"/>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-800">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<thead class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-900/50">
+<tr>
+<th class="px-6 py-3" scope="col">Transaction ID</th>
+<th class="px-6 py-3" scope="col">Date</th>
+<th class="px-6 py-3" scope="col">Energy (kWh)</th>
+<th class="px-6 py-3" scope="col">Price/kWh (₹)</th>
+<th class="px-6 py-3" scope="col">Total (₹)</th>
+<th class="px-6 py-3" scope="col">Participant</th>
+<th class="px-6 py-3 text-center" scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white dark:bg-background-dark border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/30">
+<td class="px-6 py-4 font-mono text-xs text-gray-500 dark:text-gray-500">0x...a1b2</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">2024-07-26 14:30</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">5.2</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">0.15</td>
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white">₹65.17</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-base">arrow_downward</span>
+<span>Sarah Miller</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">Completed</span>
+</td>
+</tr>
+<tr class="bg-white dark:bg-background-dark border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/30">
+<td class="px-6 py-4 font-mono text-xs text-gray-500 dark:text-gray-500">0x...c3d4</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">2024-07-26 10:15</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">3.8</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">0.12</td>
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white">₹38.43</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-500 text-base">arrow_upward</span>
+<span>David Lee</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">Completed</span>
+</td>
+</tr>
+<tr class="bg-white dark:bg-background-dark border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/30">
+<td class="px-6 py-4 font-mono text-xs text-gray-500 dark:text-gray-500">0x...e5f6</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">2024-07-25 16:45</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">2.5</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">0.18</td>
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white">₹37.60</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-base">arrow_downward</span>
+<span>Emily Chen</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">Completed</span>
+</td>
+</tr>
+<tr class="bg-white dark:bg-background-dark border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/30">
+<td class="px-6 py-4 font-mono text-xs text-gray-500 dark:text-gray-500">0x...g7h8</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">2024-07-25 12:00</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">4.1</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">0.14</td>
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white">₹47.62</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-500 text-base">arrow_upward</span>
+<span>Robert Green</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">Completed</span>
+</td>
+</tr>
+<tr class="bg-white dark:bg-background-dark hover:bg-gray-50 dark:hover:bg-gray-900/30">
+<td class="px-6 py-4 font-mono text-xs text-gray-500 dark:text-gray-500">0x...i9j0</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">2024-07-24 09:30</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">6.7</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">0.16</td>
+<td class="px-6 py-4 font-medium text-gray-900 dark:text-white">₹89.40</td>
+<td class="px-6 py-4 text-gray-900 dark:text-white">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-base">arrow_downward</span>
+<span>Olivia White</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-200 dark:border-gray-800">
+<span class="text-sm text-gray-700 dark:text-gray-400">
+                  Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span class="font-semibold text-gray-900 dark:text-white">5</span> of <span class="font-semibold text-gray-900 dark:text-white">1,254</span> Transactions
+                </span>
+<div class="inline-flex -space-x-px rounded-lg text-sm">
+<a class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-background-dark dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" href="#">Previous</a>
+<a class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-background-dark dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:text-white" href="#">Next</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>

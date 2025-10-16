@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolarConnect - Pricing</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1183d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: theme('fontFamily.display');
+        }
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between border-b border-gray-200/50 dark:border-gray-700/50">
+<div class="flex items-center gap-4">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">SolarConnect</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="landing.html#why-choose-us">How it works</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="pricing.html">Pricing</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="resources.html">Resources</a>
+</nav>
+<div class="flex items-center gap-2">
+<a class="rounded-lg px-4 py-2 text-sm font-bold text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-primary/20" href="login_page.html">Login</a>
+<a class="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105" href="signup.html">Get Started</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow py-24 sm:py-32">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<h1 class="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">Flexible Plans to Power Your Life</h1>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">Choose the right energy plan for your needs and budget. No hidden fees, just clean energy.</p>
+</div>
+<div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<p class="text-lg font-semibold text-gray-900 dark:text-white">Standard</p>
+<p class="mt-4 flex items-baseline gap-1">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">₹11.42</span>
+<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">/ kWh</span>
+</p>
+<ul class="mt-6 flex-1 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
+<li>✓ Access to public listings</li>
+<li>✓ Basic dashboard analytics</li>
+<li>✓ Email notifications</li>
+</ul>
+<a class="mt-8 block rounded-lg bg-gray-100 py-3 text-center text-sm font-semibold text-primary transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-primary dark:hover:bg-gray-700" href="signup.html">Get Started</a>
+</div>
+<div class="relative flex flex-col rounded-xl bg-white p-8 shadow-lg ring-1 ring-inset ring-primary/20 dark:bg-gray-900 dark:ring-primary/40">
+<div class="absolute right-0 top-0 -mr-2 -mt-2 rotate-12 rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase text-white">Popular</div>
+<p class="text-lg font-semibold text-primary">Pro</p>
+<p class="mt-4 flex items-baseline gap-1">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">₹8.78</span>
+<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">/ kWh</span>
+</p>
+<ul class="mt-6 flex-1 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
+<li>✓ All Standard features</li>
+<li>✓ Preferred producer matching</li>
+<li>✓ Real-time consumption monitoring</li>
+<li>✓ Priority support</li>
+</ul>
+<a class="mt-8 block rounded-lg bg-primary py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary/90" href="signup.html">Get Started</a>
+</div>
+<div class="flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 dark:ring-gray-700/50">
+<p class="text-lg font-semibold text-gray-900 dark:text-white">Enterprise</p>
+<p class="mt-4 flex items-baseline gap-1">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">Custom</span>
+</p>
+<ul class="mt-6 flex-1 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
+<li>✓ All Pro features</li>
+<li>✓ Custom trading algorithms</li>
+<li>✓ Dedicated account manager</li>
+<li>✓ API access</li>
+</ul>
+<a class="mt-8 block rounded-lg bg-gray-100 py-3 text-center text-sm font-semibold text-primary transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-primary dark:hover:bg-gray-700" href="#">Contact Sales</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-center">
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="landing.html#footer">About Us</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Contact</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary" href="#">Terms of Service</a>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2025 SolarConnect. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
